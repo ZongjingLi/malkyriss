@@ -26,7 +26,7 @@ def visualize_counterfactual_predictions(model, dataset, device, idx=0):
     
     # Dimensions
     _, _, height, width = frame1.shape
-    patch_size = (1, 8, 8)
+    patch_size = (1, 4, 4)
     h_patches = height // patch_size[1]
     w_patches = width // patch_size[2]
     
@@ -231,7 +231,7 @@ def main():
     print(f"Using device: {device}")
     
     # Create dataset
-    dataset = MovingSpritesDataset(num_samples=100, img_size=64, num_sprites=3, 
+    dataset = MovingSpritesDataset(num_samples=1, img_size=64, num_sprites=3, 
                                   sprite_size=8, max_speed=3, sequence_length=2)
     
     # Initialize model

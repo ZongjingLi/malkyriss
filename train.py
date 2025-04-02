@@ -239,14 +239,14 @@ def main():
     print(f"Using device: {device}")
     
     # Create dataset and dataloader
-    dataset = MovingSpritesDataset(num_samples=1000, img_size=64, num_sprites=3, 
+    dataset = MovingSpritesDataset(num_samples=1, img_size=64, num_sprites=3, 
                                   sprite_size=8, max_speed=3, sequence_length=2)
     dataloader = DataLoader(dataset, batch_size=32, shuffle=True, num_workers=4)
     
     # Initialize model
     model = CounterfactualWorldModel(
         img_size=64,
-        patch_size=(1, 8, 8),
+        patch_size=(1, 4, 4),
         in_channels=3,
         embed_dim=256,
         depth=4,
@@ -257,7 +257,7 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=2e-4)
     
     # Train model
-    losses = train_model(model, dataloader, optimizer, device, num_epochs=50)
+    losses = train_model(model, dataloader, optimizer, device, num_epochs=1000)
     
     # Plot training losses
     plt.figure(figsize=(10, 5))
