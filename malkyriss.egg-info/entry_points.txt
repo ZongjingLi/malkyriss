@@ -1,0 +1,3 @@
+[console_scripts]
+helper = malkyriss.main:helper
+malkyriss = malkyriss.main:main
