@@ -1,14 +1,10 @@
-.gitattributes
-.gitignore
 LICENSE
 README.md
 setup.py
-__pycache__/data.cpython-39.pyc
-__pycache__/model.cpython-39.pyc
-malkyriss/data.py
-malkyriss/main.py
 malkyriss.egg-info/PKG-INFO
 malkyriss.egg-info/SOURCES.txt
 malkyriss.egg-info/dependency_links.txt
 malkyriss.egg-info/entry_points.txt
 malkyriss.egg-info/top_level.txt
+malykriss/data.py
+malykriss/main.py
